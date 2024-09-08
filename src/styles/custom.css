@@ -1,18 +1,17 @@
-/* src/styles/custom.css */
 header {
-  background-color: #28a745; /* PetJoy’s primary green color */
+  background-color: #28a745;
 }
 
 .navbar-brand h1 {
   font-size: 1.8rem;
-  font-family: "Comic Sans MS", cursive, sans-serif; /* A playful font for a pet store */
+  font-family: "Comic Sans MS", cursive, sans-serif;
 }
 
 .nav-link {
   font-size: 1rem;
-  font-family: "Arial", sans-serif; /* Simple font for readability */
+  font-family: "Arial", sans-serif;
 }
 
 .navbar-toggler-icon {
-  background-image: url("path/to/your/icon.png"); /* Optional: Custom icon */
+  background-image: url("path/to/your/icon.png");
 }

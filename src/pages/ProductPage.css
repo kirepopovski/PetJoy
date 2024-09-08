@@ -1,13 +1,6 @@
-/* ProductPage.css */
-
 .product-page {
   padding: 2rem;
-  background: linear-gradient(
-    to bottom,
-    #f5f5dc,
-    #d2b48c
-  ); /* Gradient background */
-  /* background: #f5f5dc;  Uncomment for solid color background */
+  background: linear-gradient(to bottom, #f5f5dc, #d2b48c);
 }
 
 .product-card {
@@ -18,8 +11,8 @@
   max-height: 650px;
   display: flex;
   flex-direction: column;
-  background-color: #fff; /* White background for card content */
-  transition: transform 0.3s ease; /* Smooth transition for hover effect */
+  background-color: #fff;
+  transition: transform 0.3s ease;
 }
 
 .product-image {
@@ -58,5 +51,17 @@
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 .product-card:hover .product-image {
-  transform: scale(1.1); /* Zoom in by 10% */
+  transform: scale(1.1);
+}
+
+.btn-group {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 0.2rem;
+}
+
+.btn-group .btn.active {
+  background-color: #007bff;
+  color: #fff;
 }

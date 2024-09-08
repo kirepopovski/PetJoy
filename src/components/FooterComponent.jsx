@@ -1,6 +1,5 @@
-// src/components/FooterComponent.jsx
 import "bootstrap/dist/css/bootstrap.min.css";
-import "./FooterComponent.css"; // Import custom CSS for additional styling
+import "./FooterComponent.css";
 import fblogo from "../assets/fblogo.png";
 import instalogo from "../assets/instalogo.jpeg";
 import linkedinlogo from "../assets/linkedinlogo.jpeg";
@@ -10,7 +9,7 @@ function FooterComponent() {
     <footer class="footer bg-dark text-white py-4">
       <div class="ftr">
         <div class="row">
-          {/* Contact Information */}
+          {}
           <div class="col-md-4">
             <h5>Contact Us</h5>
             <p>
@@ -25,7 +24,7 @@ function FooterComponent() {
             </p>
           </div>
 
-          {/* Useful Links */}
+          {}
           <div class="col-md-4">
             <h5>PetJoy</h5>
             <ul class="list-unstyled">
@@ -47,10 +46,14 @@ function FooterComponent() {
             </ul>
           </div>
 
-          {/* Social Media Links */}
-          <div class="col-md-4">
-            <h5>Follow Us</h5>
-            <div class="social-links">
+          {}
+          <div class="col-md-4 text-center">
+            {" "}
+            {}
+            <h5 class="mb-3">Follow Us</h5>
+            <div class="social-links d-flex justify-content-center">
+              {" "}
+              {}
               <a
                 href="https://facebook.com"
                 target="_blank"

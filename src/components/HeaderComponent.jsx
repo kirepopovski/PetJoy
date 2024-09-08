@@ -1,16 +1,16 @@
 import { createSignal } from "solid-js";
 import { useNavigate } from "@solidjs/router";
-import logo from "../assets/logo.jpg"; // Adjust the path as needed
+import logo from "../assets/logo.jpg"; 
 import "bootstrap/dist/css/bootstrap.min.css";
-import "./HeaderComponent.css"; // Import custom CSS for additional styling
+import "./HeaderComponent.css"; 
 
 function HeaderComponent() {
-  const navigate = useNavigate(); // Get the navigate function
+  const navigate = useNavigate(); 
 
-  // Function to handle navigation on link click
+
   const handleNavigation = (path) => (e) => {
-    e.preventDefault(); // Prevent default link behavior
-    navigate(path); // Navigate to the specified path
+    e.preventDefault();
+    navigate(path); 
   };
 
   return (

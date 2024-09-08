@@ -1,9 +1,7 @@
-/* Custom styles for ProductDetailsPage */
-
 .product-image {
-  max-height: 400px; /* Ensure the image height is constrained */
-  object-fit: cover; /* Keep aspect ratio and cover container */
-  border-radius: 0.5rem; /* Rounded corners */
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: 0.5rem;
 }
 
 .product-title {
@@ -24,9 +22,8 @@
   margin-bottom: 1.5rem;
 }
 
-/* Make the "Add to Cart" button more prominent */
 .btn-primary {
-  background-color: #007bff; /* Bootstrap's primary color */
+  background-color: #007bff;
   border: none;
   padding: 0.75rem 1.5rem;
   font-size: 1.1rem;

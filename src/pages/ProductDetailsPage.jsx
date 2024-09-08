@@ -2,7 +2,7 @@ import { createSignal, createEffect, Show } from "solid-js";
 import { useParams, useNavigate } from "@solidjs/router";
 import { useCart } from "../contexts/CartContext";
 import products from "../data/products";
-import "./ProductDetailsPage.css"; // Link to CSS file for additional styling
+import "./ProductDetailsPage.css";
 
 function ProductDetailsPage() {
   const [product, setProduct] = createSignal(null);
@@ -11,13 +11,18 @@ function ProductDetailsPage() {
   const { addToCart } = useCart();
 
   createEffect(() => {
-    const productId = parseInt(params.id, 10); // Get product ID from URL
+    const productId = parseInt(params.id, 10);
     const selectedProduct = products.find((p) => p.id === productId);
     setProduct(selectedProduct);
   });
 
   const handleBackClick = () => {
-    navigate("/products"); // Navigate back to the products page
+    navigate("/products");
+  };
+
+  const handleAddToCart = () => {
+    addToCart(product());
+    navigate("/cart");
   };
 
   return (
@@ -42,7 +47,7 @@ function ProductDetailsPage() {
             </p>
             <button
               className="btn btn-primary btn-lg"
-              onClick={() => addToCart(product())}
+              onClick={handleAddToCart}
             >
               Add to Cart
             </button>

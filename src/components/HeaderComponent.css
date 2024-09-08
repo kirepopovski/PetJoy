@@ -1,12 +1,11 @@
-/* src/components/HeaderComponent.css */
 .header {
-  background-color: #f8f9fa; /* Light background color */
-  padding: 10px 20px; /* Padding for the header */
+  background-color: #f8f9fa; 
+  padding: 10px 20px; 
 }
 
 .logo-img {
-  height: 40px; /* Adjust this height to match the h3 size */
-  width: auto; /* Maintain aspect ratio */
+  height: 40px; 
+  width: auto; 
 }
 
 .navbar-brand {
@@ -15,5 +14,5 @@
 }
 
 .navbar-nav .nav-link {
-  margin-right: 15px; /* Spacing between navigation items */
+  margin-right: 15px; 
 }

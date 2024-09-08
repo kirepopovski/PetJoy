@@ -1,4 +1,3 @@
-// src/App.jsx
 import { Router, Route } from "@solidjs/router";
 import HomePage from "./pages/HomePage";
 import CartPage from "./pages/CartPage";
