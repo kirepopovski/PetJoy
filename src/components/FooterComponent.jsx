@@ -8,7 +8,7 @@ import linkedinlogo from "../assets/linkedinlogo.jpeg";
 function FooterComponent() {
   return (
     <footer class="footer bg-dark text-white py-4">
-      <div class="container">
+      <div class="ftr">
         <div class="row">
           {/* Contact Information */}
           <div class="col-md-4">
@@ -78,9 +78,9 @@ function FooterComponent() {
             </div>
           </div>
         </div>
-        <div class="text-center mt-3">
-          <p class="mb-0">© 2024 PetJoy. All rights reserved.</p>
-        </div>
+      </div>
+      <div class="text-center mt-3">
+        <p class="mb-0">© 2024 PetJoy. All rights reserved.</p>
       </div>
     </footer>
   );

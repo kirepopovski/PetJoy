@@ -24,7 +24,7 @@ function App() {
       <Route path="/aboutus" component={AboutUsPage} />
       <Route path="/products" component={ProductPage} />
       <Route path="/cart" component={CartPage} />
-      <Route path="/product/:productId" element={<ProductDetailsPage />} />
+      <Route path="/product/:id" component={ProductDetailsPage} />
     </Router>
   );
 }

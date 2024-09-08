@@ -1,30 +1,56 @@
-// src/pages/ProductDetailsPage.jsx
-import { useParams } from "solid-app-router";
-import products from "../data/products"; // Ensure this path is correct
-import "./ProductDetailsPage.css"; // Import the CSS file
+import { createSignal, createEffect, Show } from "solid-js";
+import { useParams, useNavigate } from "@solidjs/router";
+import { useCart } from "../contexts/CartContext";
+import products from "../data/products";
+import "./ProductDetailsPage.css"; // Link to CSS file for additional styling
 
-// Utility function for formatting currency
-const formatCurrency = (amount) => {
-  return `$${amount.toFixed(2)}`;
-};
+function ProductDetailsPage() {
+  const [product, setProduct] = createSignal(null);
+  const params = useParams();
+  const navigate = useNavigate();
+  const { addToCart } = useCart();
 
-const ProductDetailsPage = () => {
-  const { productId } = useParams();
-  const product = products.find((prod) => prod.id === parseInt(productId));
+  createEffect(() => {
+    const productId = parseInt(params.id, 10); // Get product ID from URL
+    const selectedProduct = products.find((p) => p.id === productId);
+    setProduct(selectedProduct);
+  });
 
-  if (!product) {
-    return <div>Product not found.</div>;
-  }
+  const handleBackClick = () => {
+    navigate("/products"); // Navigate back to the products page
+  };
 
   return (
     <div class="container mt-5">
-      <h2>{product.name}</h2>
-      <img src={product.image} alt={product.name} class="product-image" />
-      <p class="product-description">{product.description}</p>
-      <p class="product-price">{formatCurrency(product.price)}</p>
-      <button class="btn btn-primary">Add to Cart</button>
+      <Show when={product()} fallback={<div>Loading...</div>}>
+        <button class="btn btn-secondary back-button" onClick={handleBackClick}>
+          Back to Products
+        </button>
+        <div class="row">
+          <div class="col-md-6">
+            <img
+              src={product().image[Object.keys(product().image)[0]]}
+              alt={product().name}
+              class="img-fluid product-image"
+            />
+          </div>
+          <div class="col-md-6">
+            <h1 class="product-title">{product().name}</h1>
+            <p class="product-description">{product().description}</p>
+            <p class="product-price">
+              <strong>${product().price.toFixed(2)}</strong>
+            </p>
+            <button
+              className="btn btn-primary btn-lg"
+              onClick={() => addToCart(product())}
+            >
+              Add to Cart
+            </button>
+          </div>
+        </div>
+      </Show>
     </div>
   );
-};
+}
 
 export default ProductDetailsPage;

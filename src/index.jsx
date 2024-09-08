@@ -4,5 +4,13 @@ import "bootstrap/dist/js/bootstrap.bundle.min";
 import "./styles/custom.css";
 import { render } from "solid-js/web";
 import App from "./App";
+import { CartProvider } from "./contexts/CartContext";
 
-render(() => <App />, document.getElementById("root"));
+render(
+  () => (
+    <CartProvider>
+      <App />
+    </CartProvider>
+  ),
+  document.getElementById("root")
+);

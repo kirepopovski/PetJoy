@@ -1,0 +1,40 @@
+/* src/pages/CartPage.css */
+
+.container {
+  background-color: #f9f9f9; /* Light gray background for the page */
+  padding: 2rem; /* Padding for the page */
+}
+
+.table {
+  background-color: #fff; /* White background for the table */
+  border-radius: 8px; /* Rounded corners for the table */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.table th,
+.table td {
+  vertical-align: middle;
+}
+
+.table thead th {
+  background-color: #f8f9fa; /* Light gray background for table header */
+}
+
+.table tbody tr {
+  border-bottom: 1px solid #ddd; /* Border between rows */
+}
+
+.table tfoot td {
+  background-color: #f8f9fa; /* Light gray background for table footer */
+  font-weight: bold; /* Bold text for footer */
+  border-top: 2px solid #ddd; /* Top border for separation */
+}
+
+.cart-item-image {
+  width: 100px; /* Fixed width for cart item image */
+  height: auto; /* Maintain aspect ratio */
+}
+
+.table-bordered {
+  border: 1px solid #ddd; /* Border for the table */
+}

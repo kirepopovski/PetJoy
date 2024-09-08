@@ -1,115 +1,62 @@
-/* Make product page full-width and full-height */
+/* ProductPage.css */
+
 .product-page {
-  position: relative;
-  background-image: url("../assets/cover-photo.png"); /* Path to your background image */
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  min-height: 100vh;
-  width: 100vw;
-  padding: 50px 20px; /* Added horizontal padding for space on the sides */
-  z-index: 1;
-  overflow: hidden; /* To prevent horizontal scrolling */
+  padding: 2rem;
+  background: linear-gradient(
+    to bottom,
+    #f5f5dc,
+    #d2b48c
+  ); /* Gradient background */
+  /* background: #f5f5dc;  Uncomment for solid color background */
 }
 
-/* Add a slight overlay to the background for contrast */
-.product-page::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(255, 255, 255, 0.7); /* Light overlay */
-  z-index: -1; /* Place it behind the content */
-}
-
-/* Ensure full-width layout for the row and container */
-.container-fluid {
-  max-width: 100%;
-  padding: 0 15px; /* Adjusted container padding */
-}
-
-/* Ensure cards have margin around them */
-.card {
-  margin: 15px; /* Added margin around cards for spacing */
-}
-
-/* Product card styling */
 .product-card {
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.2s ease-in-out;
-  height: 100%;
+  overflow: hidden;
+  position: relative;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  max-height: 650px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  background-color: #fff; /* White background for card content */
+  transition: transform 0.3s ease; /* Smooth transition for hover effect */
 }
 
-/* Card hover effect */
-.product-card:hover {
-  transform: scale(1.05);
-}
-
-/* Increase product image size */
 .product-image {
-  max-height: 250px;
+  height: 350px;
   object-fit: cover;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-  width: 100%;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  transition: transform 0.3s ease;
 }
 
-/* Compact the card body */
 .card-body {
-  padding: 10px;
-  flex-grow: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  padding: 0.5rem;
+  overflow: hidden;
 }
 
-/* Center text and adjust margins for title, price, and button */
 .card-title {
   font-size: 1rem;
-  margin-bottom: 5px;
-  text-align: center;
 }
 
 .product-description {
-  font-size: 0.8rem;
-  color: #6c757d;
-  text-align: justify;
-  margin-bottom: 5px;
+  font-size: 0.85rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
-.card-text strong {
-  font-size: 1rem;
-  text-align: center;
-  display: block;
-  margin-bottom: 5px;
-}
-
-/* View Details button styling */
 .btn-block {
   width: 100%;
-  margin-top: auto;
-  background-color: #007bff;
-  border-color: #007bff;
+  padding: 0.4rem;
 }
-
-/* Responsive layout */
-@media (max-width: 768px) {
-  .product-card {
-    margin-bottom: 20px;
-  }
-
-  .product-page h1 {
-    font-size: 2rem;
-  }
-
-  .product-image {
-    max-height: 220px;
-  }
+.promo-text {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 1.25rem;
+  color: #333;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.product-card:hover .product-image {
+  transform: scale(1.1); /* Zoom in by 10% */
 }
